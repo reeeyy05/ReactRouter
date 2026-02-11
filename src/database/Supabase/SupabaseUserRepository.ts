@@ -109,7 +109,7 @@ export class SupabaseUserRepository implements UserRepository {
     async resetPasswordForEmail(email: string): Promise<{ error?: any }> {
         const { error } = await supabase.auth.resetPasswordForEmail(
             email, {
-            redirectTo: "https://.../reset-password"
+            redirectTo: "https://reactRouter.com/auth/reset-password"
         });
         return { error: error || null };
     }
