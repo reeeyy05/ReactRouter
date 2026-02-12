@@ -7,6 +7,7 @@ import Products from "./components/pages/Products";
 import ProductsPage from "./components/pages/ProductsPage";
 import SimpleForm from "./components/forms/SimpleForms";
 import SignInForm from "./components/forms/SignInForm";
+import DashBoard from "./components/pages/DashBoardPages";
 
 
 export default function App() {
@@ -19,8 +20,9 @@ export default function App() {
                     <Route path="/profile" element={<Profile />} />
                     <Route path="/products" element={<Products />} />
                     <Route path="/signUp" element={<SimpleForm />} />
-                    <Route path="/pruebaSupabase" element={<ProductsPage />} />
                     <Route path="/signIn" element={<SignInForm />} />
+                    <Route path="/pruebaSupabase" element={<ProductsPage />} />
+                    <Route path="/dashboard" element={<DashBoard />} />
                 </Routes>
             </main>
             <Footer />
