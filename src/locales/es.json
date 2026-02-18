@@ -1,0 +1,11 @@
+{
+    "welcome": "Bienvenido {{user}}",
+    "actions": {
+        "save": "Guardar",
+        "cancel": "Cancelar"
+    },
+    "heroSection": {
+        "tittle": "Bienvenido a nuestra tienda",
+        "description": "Explora nuestros productos"
+    }
+}
