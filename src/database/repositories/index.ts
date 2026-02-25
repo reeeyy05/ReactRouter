@@ -1,7 +1,9 @@
 import { SupabaseProductRepository } from "../Supabase/SupabaseProductRepository";
+import { SupabaseStorageRepository } from "../Supabase/SupabaseStorageRepository";
 import { SupabaseUserRepository } from "../Supabase/SupabaseUserRepository";
 import type { ProductRepository } from "./ProductRepository";
 import type { UserRepository } from "./UserRepository";
+import type { StorageRepository } from "./StorageRepository";
 
 /**
  * Fábrica de repositorios
@@ -20,4 +22,8 @@ export const createProductRepository = (): ProductRepository => {
 
 export const createUserRepository = (): UserRepository => {
     return new SupabaseUserRepository();
+};
+
+export const createStorageRepository = (): StorageRepository => {
+    return new SupabaseStorageRepository();
 };

@@ -4,6 +4,7 @@ import { toast, Toaster } from 'react-hot-toast';
 import InputFieldClase from "./InputFieldsClase";
 import Button from "../UI/SimpleButton";
 import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "../../stores/authStore";
 
 interface FormData {
     email: string;
@@ -17,6 +18,8 @@ function SignInForm() {
     const [formData, setFormData] = useState<FormData>({ email: "", password: "" });
 
     const navigate = useNavigate();
+
+    const setSession = useAuthStore((state) => state.setSession);
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -38,6 +41,7 @@ function SignInForm() {
             if (result.data) {
 
                 // Guardar estado
+                setSession(result.data);
 
                 // Redirigir a Home
                 navigate('/profile'); // Redireccionar a perfil
