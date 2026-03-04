@@ -9,9 +9,9 @@ interface Option {
     label: string;
 }
 
-export default function Select({ options, ...props }: SelectProp) {
-    const baseStyles = "";
-    const hoverStyles = "";
+export default function Select({ options }: SelectProp) {
+    // const baseStyles = "";
+    // const hoverStyles = "";
 
     return (
         <select>
